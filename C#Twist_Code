@@ -1,0 +1,33 @@
+using System;
+
+public class Helloworld
+{
+    public static void Main()
+    {
+        // Greet the user
+        Console.WriteLine("Hello, World!");
+
+        // Ask for user name
+        Console.Write("What is your name? ");
+        string name = Console.ReadLine()!;  // null-forgiving to silence CS8600
+
+        // Tell them how many letters their name has
+        Console.WriteLine($"Did you know your name has {name.Length} letters?");
+
+        // Ask user favorite activity
+        Console.Write("What is your favorite activity? ");
+        string activity = Console.ReadLine()!;
+
+        // Build the message FIRST
+        string message = $"Nice to meet you, {name}! It's awesome that you enjoy {activity}.";
+
+        // Build dynamic border based on message length
+        string border = new('*', message.Length + 4);
+
+        // Print message in a decorated box
+        Console.WriteLine();
+        Console.WriteLine(border);
+        Console.WriteLine($"* {message} *");
+        Console.WriteLine(border);
+    }
+}

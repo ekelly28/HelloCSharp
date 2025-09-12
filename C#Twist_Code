@@ -29,5 +29,10 @@ public class Helloworld
         Console.WriteLine(border);
         Console.WriteLine($"* {message} *");
         Console.WriteLine(border);
+        Console.WriteLine("Heres a fork!");
+        Console.WriteLine("| | |");
+        Console.WriteLine("-----");
+        Console.WriteLine("  |  ");
+        Console.WriteLine("  |  ");
     }
 }
